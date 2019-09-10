@@ -12,8 +12,8 @@ app.use(express.json())
 
 
 
-const ur = process.env.URI 
-mongoose.connect(uri, {useNEwUrlParser: true, useCreateIndex: true})
+const uri = process.env.URI 
+mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true})
 const connection = mongoose.connection
 connection.once('open', () => {
     console.log("Connected to Mongo")
